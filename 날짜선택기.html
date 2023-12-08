@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      //select 박스 안에 들어갈 option 태그 요소를
+      // 동적으로 생성하여 연도  select 박스에 추가 해보자.
+      function createYear() {
+        for (let i = 2012; i >= 1940; i--) {
+          let op = document.createElement("option"); // <option></option>
+          op.text = i; // <option>2012</option>
+          let yy = document.getElementById("yy");
+          yy.add(op); //셀렉트 상자에 추가하기
+        }
+      }
+
+      function createMonth() {
+        for (let i = 1; i <= 12; i++) {
+          let op = document.createElement("option");
+          op.text = i;
+          let mm = document.getElementById("mm");
+          mm.add(op);
+        }
+      }
+
+      function createDay() {
+        for (let i = 1; i <= 31; i++) {
+          let op = document.createElement("option");
+          op.text = i;
+          let dd = document.getElementById("dd");
+          dd.add(op);
+        }
+      }
+
+      addEventListener("load", function () {
+        createYear(); //연도생성
+        createMonth(); //월 생성
+        createDay(); //일자 생성
+      });
+    </script>
+  </head>
+  <body>
+    <select name="" id="yy">
+      <option value="">출생년도</option>
+    </select>
+    <select name="" id="mm">
+      <option value="">월</option>
+    </select>
+    <select name="" id="dd">
+      <option value="">일</option>
+    </select>
+  </body>
+</html>

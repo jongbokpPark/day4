@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- <script>
+      // "\"\""
+      //   document.write('<img src="../images/Gallerxy/blue_king.png">');
+      //   document.write("<img src=\"../images/Gallerxy/blue_king.png\">");
+
+      //   document.write(' "야 빨리와" 밥먹어야지');
+      // document.write("\"야 빨리와\" 밥먹어야지");
+
+      //   100층
+      function createFloors() {
+        let table = document.createElement("table");
+        table.style.border = 20 + "px solid black";
+        table.style.width = 250 + "px";
+
+        for (let i = 1; i <= 100; i++) {
+          let tr = document.createElement("tr");
+          let td1 = document.createElement("td");
+          let td2 = document.createElement("td");
+
+          td1.innerHTML = i + "호";
+          td2.innerHTML = i + "호";
+
+          tr.appendChild(td1);
+          tr.appendChild(td2);
+
+          //   document.querySelector("table").appendChild(tr);
+          table.appendChild(tr);
+        }
+        document.body.appendChild(table);
+      }
+
+      addEventListener("load", function () {
+        createFloors();
+      });
+    </script> -->
+    <script>
+      document.write('<table border="10px" width="100%">');
+      for (let i = 1; i <= 100; i++) {
+        document.write("<tr>"); // 천장
+
+        for (let a = 1; a <= 25; a++) {
+          document.write("<td> " + i + "층" + a + "호</td>");
+        }
+
+        document.write("</tr>"); // 바닥
+      }
+      document.write("</table>");
+    </script>
+  </head>
+  <body>
+    <!-- html에서도 테이블을 지원하는데,
+    이때 코드 작성시, 개발자는 건물을 연두해 두고
+    비교해가면서 공부하면 쉬워짐 -->
+
+    <!-- <table border="10px" width="250px">
+      <tr>
+        <td></td>
+      </tr>
+    </table> -->
+  </body>
+</html>

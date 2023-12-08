@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      // 넘어온 숫자가 1자리 수이면 앞에 '0을'
+      function gatNumString(n) {
+        let str = "";
+        if (n < 10) {
+          // 한자리수면
+          str = "0" + n;
+        } else {
+          // 두자리수면
+          str = n;
+        }
+
+        console.log("결과는", str);
+        return str;
+      }
+      // 태그들을 문자열로 담개될 전연변수
+      let f = parseInt(prompt("층수 입력"));
+      let r = parseInt(prompt("호수 입력"));
+
+      let tag;
+
+      tag = '<table border="10px">';
+      for (let i = 1; i <= f; i++) {
+        tag = tag + "<tr>"; // 천장
+        for (let z = 1; z <= r; z++) {
+          //   if (z >= 10) {
+          //     tag = tag + "<td>" + i + z + "호</td>"; // 벽
+          //   } else {
+          //     tag = tag + "<td>" + i + "0" + z + "호</td>"; // 벽
+          //   }
+
+          tag = tag + "<td>" + i + gatNumString(z) + "호</td>"; // 벽
+        }
+
+        tag = tag + "</tr>"; // 천장
+      }
+      tag = tag + "</table>";
+
+      document.write(tag);
+    </script>
+  </head>
+  <body></body>
+</html>
